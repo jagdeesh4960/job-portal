@@ -1,3 +1,5 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import Job from "../models/jobModel.js";
 import Applications from "../models/applicationModel.js";
 import appliedJob from "../models/appliedJobsModel.js";
@@ -27,12 +29,12 @@ export const cancelApplication = async (req, res, next) => {
 
     const applicant = await userModel.findById(req.user._id);
     if (!applicant) {
-      return res.status(404).json({ message: "Applicant not found" });  
+      return res.status(404).json({ message: "Applicant not found" });
     }
     const job = await Job.findById(jobId);
     if (!job) {
       return res.status(404).json({ message: "Job not found" });
-    } 
+    }
     const employer = await userModel.findById(job.authorId);
     if (!employer) {
       return res.status(404).json({ message: "Employer not found" });
@@ -48,7 +50,7 @@ export const cancelApplication = async (req, res, next) => {
       `,
     });
 
-  
+
     res.status(200).json(application);
   } catch (error) {
     next(error);
@@ -135,19 +137,28 @@ export const updateStatus = async (req, res, next) => {
       subject: `Your Application Status for "${jobTitle}" Updated`,
       text: `Hi ${candidateName},\n\nYour application status for "${jobTitle}" has been updated to "${status.toUpperCase()}".\n\nThank you for applying.\n\n- Job Portal Team`,
       html: `
-        <h2>Hello ${candidateName},</h2>
-        <p>Your application status for <strong>${jobTitle}</strong> has been updated.</p>
-        <p><strong>New Status:</strong> ${status.toUpperCase()}</p>
-        <br/>
-        <p>Thank you for using our portal.<br/>- Job Portal Team</p>
+     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 25px; border: 1px solid #e0e0e0; border-radius: 10px; background-color: #fdfdfd; text-align: left; line-height: 1.6;">
+      <h2 style="color: #333;">Hello ${candidateName},</h2>
+      <p style="color: #555; font-size: 16px;">
+      Your application status for <strong>${jobTitle}</strong> has been updated.
+      </p>
+      <p style="color: #555; font-size: 16px;">
+      <strong>New Status:</strong> <span style="color: #007bff;">${status.toUpperCase()}</span>
+       </p>
+      <br/>
+      <p style="color: #777; font-size: 14px;">
+    Thank you for using our portal.<br/>- Job Portal Team
+  </p>
+</div>
+
       `,
     });
 
     const lowerStatus = status.toLowerCase();
     if (lowerStatus === "accepted" || lowerStatus === "shortlisted") {
-      const candidatePhone = populatedApplication.formDetails.phone; 
+      const candidatePhone = populatedApplication.formDetails.phone;
       console.log("📞 Candidate phone number:", candidatePhone);
-      
+
       if (candidatePhone) {
         await sendWhatsAppMessage(candidatePhone, candidateName, jobTitle);
       } else {

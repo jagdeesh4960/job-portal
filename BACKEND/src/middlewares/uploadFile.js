@@ -1,6 +1,4 @@
 import multer from "multer";
-import mongoose from "mongoose";
-import { body } from "express-validator";
 
 const storage = multer.memoryStorage();
 const upload = multer({

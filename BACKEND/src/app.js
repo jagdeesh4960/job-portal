@@ -1,3 +1,5 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import express from 'express';
 import authRoutes from './routes/authRoutes.js';
 import jobRoutes from './routes/jobRoutes.js';
@@ -17,7 +19,7 @@ router.use(cookieParser());
 router.use(morgan('dev'));
 router.use(
   cors({
-    origin:'http://localhost:5173',
+    origin: process.env.FRONTEND_URL,
     credentials: true,
   })
 );

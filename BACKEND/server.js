@@ -1,5 +1,6 @@
-import express from 'express';
 import dotenv from 'dotenv';
+dotenv.config();
+import express from 'express';
 import { createServer } from 'http';
 import { Server } from 'socket.io';
 import cors from 'cors'; // ✅ add this
@@ -9,13 +10,13 @@ import connectDB from './src/config/db.js';
 import appRoutes from './src/app.js';
 import initSocket from './src/socket/socketIo.js';
 
-dotenv.config();
+
 
 const app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
-    origin: 'http://localhost:5173', 
+    origin:process.env.FRONTEND_URL, 
     credentials: true,           
 }    
 });
@@ -23,7 +24,7 @@ const io = new Server(httpServer, {
 connectDB();
 
 app.use(cors({
-  origin: 'http://localhost:5173', 
+  origin: process.env.FRONTEND_URL, 
   credentials: true,               
 }));
 

@@ -1,3 +1,5 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import express from 'express';
 import { registerUser, loginUser, updateProfile, logOutUser, updateProfilePic, forgotPassword, resetPassword} from '../controllers/authController.js';
 import { protect } from '../middlewares/authMiddleware.js';

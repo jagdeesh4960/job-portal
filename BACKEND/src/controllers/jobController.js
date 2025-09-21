@@ -1,3 +1,5 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import Job from "../models/jobModel.js";
 import appliedJobs from "../models/appliedJobsModel.js";
 import SavedJobs from "../models/savedJobsModel.js";

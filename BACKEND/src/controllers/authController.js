@@ -1,3 +1,5 @@
+import dotenv from "dotenv";
+dotenv.config();
 import bcrypt from "bcryptjs";
 import crypto from "crypto";
 
@@ -11,7 +13,7 @@ import { sendEmail } from "../services/sendEmail.js";
 
 export const registerUser = async (req, res, next) => {
   try {
-    let { name, email, password,role,phone } = req.body;
+    let { name, email, password, role, phone } = req.body;
 
     const userExists = await userModel.findOne({ email });
     if (userExists) {
@@ -200,12 +202,13 @@ export const forgotPassword = async (req, res) => {
   await sendEmail({
     to: email,
     subject: "Reset Your Password",
-
     html: `
-      <h3>Hello,${user.name}</h3>
-      <p>You requested to reset your password.</p>
-      <a href="${resetUrl}" target="_blank">Click here to reset your password</a>
-      <p>This link will expire in 15 minutes.</p>
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 10px; background-color: #f9f9f9; text-align: center;">
+      <h3 style="color: #333;">Hello, ${user.name}</h3>
+      <p style="color: #555; font-size: 16px;">You requested to reset your password.</p>
+      <a href="${resetUrl}" target="_blank" style="display: inline-block; margin: 20px 0; padding: 12px 25px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold;">Click here to reset your password</a>
+      <p style="color: #888; font-size: 14px;">This link will expire in 15 minutes.</p>
+</div>
     `,
   });
 
