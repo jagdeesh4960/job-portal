@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { getAppliedJobs } from "../../features/jobs/jobThunks";
+import { getAppliedJobs } from "../../features/jobs/jobThunks.js";
 import { motion } from "framer-motion";
 
 const AppliedJobs = () => {

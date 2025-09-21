@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { applyToJob, uploadResume } from "../../features/jobs/jobThunks";
+import { applyToJob, uploadResume } from "../../features/jobs/jobThunks.js";
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import { AiOutlineLoading3Quarters, AiOutlineCloudUpload, AiOutlineCheckCircle, AiOutlineCloseCircle } from "react-icons/ai";

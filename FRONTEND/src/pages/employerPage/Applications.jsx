@@ -1,14 +1,11 @@
-
-
-
 import React, { useEffect, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Fuse from "fuse.js";
 import useDebounce from "../../hooks/useDebounce";
-import { fetchAllApplications, updateStatus } from "../../features/applications/applicationThunks";
-import { fetchAllJobs } from "../../features/jobs/jobThunks";
+import { fetchAllApplications, updateStatus } from "../../features/applications/applicationThunks.js";
+import { fetchAllJobs } from "../../features/jobs/jobThunks.js";
 
 const Applications = () => {
   const dispatch = useDispatch();

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { User, Phone, Mail, Edit3, Save, Pencil, LogOut } from "lucide-react";
 import { motion } from "framer-motion";
-import { logOutUser, updateProfile, updateProfileImage } from "../../features/auth/authThunks";
+import { logOutUser, updateProfile, updateProfileImage } from "../../features/auth/authThunks.js";
 import { useNavigate } from "react-router-dom";
 import { AiOutlineLoading3Quarters, AiOutlineCheckCircle } from "react-icons/ai";
 import PhoneInput from 'react-phone-input-2';

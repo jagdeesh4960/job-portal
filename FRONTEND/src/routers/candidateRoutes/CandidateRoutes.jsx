@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import SavedJobs from "../../pages/candidatePage/SavedJobs";
-import AppliedJobs from "../../pages/candidatePage/AppliedJobs";
+import SavedJobs from "../../pages/candidatePage/SavedJobs.jsx";
+import AppliedJobs from "../../pages/candidatePage/AppliedJobs.jsx";
 
 const CandidateRoutes = () => {
   return (

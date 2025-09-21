@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import API from '../../api/api';
+import API from '../../api/api.js';
 
 // LOGIN user (already exists)
 export const loginUser = createAsyncThunk(
@@ -26,7 +26,6 @@ export const logOutUser = createAsyncThunk(
     }
   }
 );
-
 
 // ✅ REGISTER user
 export const registerUser = createAsyncThunk(

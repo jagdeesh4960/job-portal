@@ -1,8 +1,8 @@
 
 import { Routes, Route } from "react-router-dom";
-import Applications from "../../pages/employerPage/Applications";
-import PostedJobs from "../../pages/employerPage/PostedJobs";
-import CreateJob from "../../pages/employerPage/CreateJob";
+import Applications from "../../pages/employerPage/Applications.jsx";
+import PostedJobs from "../../pages/employerPage/PostedJobs.jsx";
+import CreateJob from "../../pages/employerPage/CreateJob.jsx";
 
 
 const EmployerRoutes = () => {

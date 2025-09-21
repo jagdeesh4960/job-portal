@@ -9,7 +9,7 @@ import {
   FilePlus,
   LogOut
 } from 'lucide-react';
-import { logout } from '../../features/auth/AuthSlice';
+import { logout } from '../../features/auth/AuthSlice.js';
 
 const CandidatePage = () => {
   const { user } = useSelector((state) => state.auth);

@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
-import EmployerDashboard from '../../components/userComponents/EmployerDashboard';
-import CandidateDashboard from '../../components/userComponents/CandidateDashboard';
+import EmployerDashboard from '../../components/userComponents/EmployerDashboard.jsx';
+import CandidateDashboard from '../../components/userComponents/CandidateDashboard.jsx';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 

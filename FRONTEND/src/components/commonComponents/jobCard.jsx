@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
-import { saveToJob } from "../../features/jobs/jobThunks";
+import { saveToJob } from "../../features/jobs/jobThunks.js";
 
 // Highlight function
 const highlightText = (text, term) => {

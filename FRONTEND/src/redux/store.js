@@ -1,7 +1,7 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
-import authReducer from '../features/auth/AuthSlice';
-import jobsReducer from '../features/jobs/JobSlice';
-import applicationReducer from '../features/applications/ApplicationSlice';
+import authReducer from '../features/auth/AuthSlice.js';
+import jobsReducer from '../features/jobs/JobSlice.js';
+import applicationReducer from '../features/applications/ApplicationSlice.js';
 
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage'; // defaults to localStorage

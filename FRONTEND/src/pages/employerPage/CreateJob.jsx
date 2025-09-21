@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { createJob } from "../../features/jobs/jobThunks";
+import { createJob } from "../../features/jobs/jobThunks.js";
 import { motion } from "framer-motion";
 
 const CreateJob = () => {

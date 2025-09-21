@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { AiOutlineLock } from "react-icons/ai";
-import { resetPassword } from "../../features/auth/authThunks";
+import { resetPassword } from "../../features/auth/authThunks.js";
 import { useDispatch } from "react-redux";
 
 const ResetPassword = () => {

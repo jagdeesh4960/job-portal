@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { getSavedJobs, removeSaveJob } from '../../features/jobs/jobThunks';
+import { getSavedJobs, removeSaveJob } from '../../features/jobs/jobThunks.js';
 import { motion } from 'framer-motion';
 
 const SavedJobs = () => {

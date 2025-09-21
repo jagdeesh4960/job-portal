@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { editJob } from '../../features/jobs/jobThunks';
+import { editJob } from '../../features/jobs/jobThunks.js';
 import { motion } from 'framer-motion';
 
 const EditJob = () => {

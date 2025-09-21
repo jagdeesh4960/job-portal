@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setSearchTerm, setJobTypeFilter } from '../../features/jobs/JobSlice';
-import JobCard from '../../components/commonComponents/jobCard';
+import { setSearchTerm, setJobTypeFilter } from '../../features/jobs/JobSlice.js';
+import JobCard from '../../components/commonComponents/jobCard.jsx';
 import Fuse from 'fuse.js';
-import useDebounce from '../../hooks/useDebounce';
-import { fetchAllJobs } from '../../features/jobs/jobThunks';
+import useDebounce from '../../hooks/useDebounce.js';
+import { fetchAllJobs } from '../../features/jobs/jobThunks.js';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const JobList = () => {

@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchAllJobs } from "../../features/jobs/jobThunks";
-import { cancelApplication } from "../../features/applications/applicationThunks";
+import { fetchAllJobs } from "../../features/jobs/jobThunks.js";
+import { cancelApplication } from "../../features/applications/applicationThunks.js";
 import { motion } from "framer-motion";
 
 const JobDetail = () => {

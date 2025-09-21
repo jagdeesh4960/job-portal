@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineMail, AiOutlineCheckCircle } from "react-icons/ai";
-import { forgotPassword } from "../../features/auth/authThunks";
+import { forgotPassword } from "../../features/auth/authThunks.js";
 import { useDispatch } from "react-redux";
 
 const ForgotPassword = () => {

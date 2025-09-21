@@ -5,18 +5,18 @@ import {
 } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import CandidateRoutes from "./routers/candidateRoutes/CandidateRoutes";
-import EmployerRoutes from "./routers/employerRoutes/EmployerRoutes";
-import Login from "./pages/authPage/Login";
-import Register from "./pages/authPage/Register";
-import ProtectedRoute from "./components/authComponent/ProtectedRoute";
-import Unauthorized from "./pages/authPage/Unauthorized";
-import RoleBasedRedirect from "./components/authComponent/RoleBasedRedirect";
-import CommonRoutes from "./routers/commonRoutes/commonRoutes";
-import Navbar from "./components/commonComponents/Navbar";
-import GoogleAuthSuccess from "./pages/authPage/GoogleAuthSuccess";
-import ForgotPassword from "./pages/authPage/ForgotPassword";
-import ResetPassword from "./pages/authPage/ResetPassword";
+import CandidateRoutes from "./routers/candidateRoutes/CandidateRoutes.jsx";
+import EmployerRoutes from "./routers/employerRoutes/EmployerRoutes.jsx";
+import Login from "./pages/authPage/Login.jsx";
+import Register from "./pages/authPage/Register.jsx";
+import ProtectedRoute from "./components/authComponent/ProtectedRoute.jsx";
+import Unauthorized from "./pages/authPage/Unauthorized.jsx";
+import RoleBasedRedirect from "./components/authComponent/RoleBasedRedirect.jsx";
+import CommonRoutes from "./routers/commonRoutes/commonRoutes.jsx";
+import Navbar from "./components/commonComponents/Navbar.jsx";
+import GoogleAuthSuccess from "./pages/authPage/GoogleAuthSuccess.jsx";
+import ForgotPassword from "./pages/authPage/ForgotPassword.jsx";
+import ResetPassword from "./pages/authPage/ResetPassword.jsx";
 
 const AppRoutes = () => {
   const { user } = useSelector((state) => state.auth);
@@ -37,7 +37,7 @@ const AppRoutes = () => {
         <Route path="/reset-password/:token" element={<ResetPassword />} /> 
 
         {/* Protected Routes */}
-        
+
         <Route
           path="/"
           element={

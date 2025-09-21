@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState, useMemo } from 'react';
-import { deleteJob, fetchUserJobs } from '../../features/jobs/jobThunks';
+import { deleteJob, fetchUserJobs } from '../../features/jobs/jobThunks.js';
 import { motion } from 'framer-motion';
 import Fuse from 'fuse.js';
-import useDebounce from '../../hooks/useDebounce';
+import useDebounce from '../../hooks/useDebounce.js';
 
 const PostedJobs = () => {
   const dispatch = useDispatch();

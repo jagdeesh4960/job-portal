@@ -1,12 +1,12 @@
 import { Routes, Route } from "react-router-dom";
-import Dashboard from "../../pages/commonPage/Dashboard";
-import Profile from "../../pages/commonPage/Profile";
-import JobList from "../../pages/commonPage/JobList";
-import Navbar from "../../components/commonComponents/Navbar";
-import JobDetail from "../../pages/commonPage/jobDetails";
-import EditJob from "../../pages/commonPage/EditJob";
-import ApplicationForm from "../../pages/commonPage/ApplicationForm";
-import ViewApplication from "../../pages/commonPage/viewApplication";
+import Dashboard from "../../pages/commonPage/Dashboard.jsx";
+import Profile from "../../pages/commonPage/Profile.jsx";
+import JobList from "../../pages/commonPage/JobList.jsx";
+import Navbar from "../../components/commonComponents/Navbar.jsx";
+import JobDetail from "../../pages/commonPage/jobDetails.jsx";
+import EditJob from "../../pages/commonPage/EditJob.jsx";
+import ApplicationForm from "../../pages/commonPage/ApplicationForm.jsx";
+import ViewApplication from "../../pages/commonPage/viewApplication.jsx";
 
 
 const CommonRoutes = () => {
