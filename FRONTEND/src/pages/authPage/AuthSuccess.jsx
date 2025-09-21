@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 import { useDispatch } from "react-redux";
-import { setUser } from "../../features/auth/authSlice";
+import { setUser } from "../../features/auth/AuthSlice.js";
 
 const AuthSuccess = () => {
   const navigate = useNavigate();
