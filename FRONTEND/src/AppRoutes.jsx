@@ -24,17 +24,20 @@ const AppRoutes = () => {
 
   return (
     <>
-      {user && path !== "/login" && path !== "/register" && <Navbar />}
+      {user && path !== "/login" && path !== "/register" && <Navbar/>}
       <Routes>
+
         {/* Public Routes */}
+
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/google-auth-success" element={<GoogleAuthSuccess />} />
         <Route path="/unauthorized" element={<Unauthorized />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/reset-password/:token" element={<ResetPassword />} />
+        <Route path="/reset-password/:token" element={<ResetPassword />} /> 
 
         {/* Protected Routes */}
+        
         <Route
           path="/"
           element={

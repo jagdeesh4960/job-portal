@@ -2,6 +2,8 @@ import { v2 as cloudinary } from 'cloudinary';
 import config from '../config/config.js';
 import { Readable } from 'stream'
 
+
+
 cloudinary.config({
   cloud_name: config.CLOUD_NAME,
   api_key: config.API_KEY,
@@ -32,7 +34,7 @@ export const uploadFile = (fileBuffer, resourceType = "auto") => {
 
 export const uploadResumeToCloud = (
   fileBuffer,
-  resourceType = "raw", // ✅ Force raw
+  resourceType = "raw",
   originalname = "file.pdf"
 ) => {
   return new Promise((resolve, reject) => {
@@ -73,6 +75,7 @@ export const uploadResumeToCloud = (
     Readable.from(fileBuffer).pipe(uploadStream);
   });
 };
+
 
 export const deleteFile = (public_id) => {
   return new Promise((resolve, reject) => {

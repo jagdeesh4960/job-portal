@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { setUser } from "../../features/auth/authSlice";
-import {jwtDecode} from "jwt-decode";
+import { setUser } from "../../features/auth/authSlice.js";
+import { jwtDecode} from "jwt-decode";
 
 const GoogleAuthSuccess = () => {
   const [params] = useSearchParams();

@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { loginUser, registerUser, getCurrentUser, updateProfile, logOutUser } from './authThunks.js';
 
+
 const initialState = {
   user: null,
   loading: false,
